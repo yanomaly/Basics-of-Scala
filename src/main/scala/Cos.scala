@@ -33,7 +33,6 @@ object Cos extends App {
     cos2 += sc
     counter += 2
     counter2 += 1
-  end while
 
   printf(out, cos1)
   println()
