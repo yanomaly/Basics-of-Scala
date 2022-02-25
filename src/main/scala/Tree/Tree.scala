@@ -71,16 +71,16 @@ class Tree(var root: Node) {
       null
     if(node.value > key)
       node.leftChild = delete(node.leftChild, key)
-      node.leftChild
+      node
     else if(node.value < key)
       node.rightChild = delete(node.rightChild, key)
-      node.rightChild
+      node
     if (node.leftChild == null)
       node.rightChild
     else if (node.rightChild == null)
       node.leftChild
     else
-      var min = findMin(node).value
+      var min = findMin(node.rightChild).value
       node.value = min
       node.rightChild = delete(node.rightChild, min)
       node

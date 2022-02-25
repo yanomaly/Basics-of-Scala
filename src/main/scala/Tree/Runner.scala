@@ -14,8 +14,9 @@ object Runner extends App {
     else if(x.rightChild != null && x.leftChild != null) x.height = if(x.leftChild.height >= x.rightChild.height) x.leftChild.height else x.rightChild.height
   )
   println()
-  tree.straight(tree.root, x => println(x.height))
-  tree.root = tree.delete(tree.root, 4)
+  tree.straight(tree.root, x => println(x.value))
+  println()
+  println(tree.root = tree.delete(tree.root, 0))
   println()
   tree.straight(tree.root, x => println(x.value))
 }
