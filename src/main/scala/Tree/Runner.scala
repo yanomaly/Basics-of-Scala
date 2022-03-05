@@ -1,5 +1,7 @@
 package Tree
 
+import java.math.MathContext
+
 object Runner extends App {
   var tree: Tree = new Tree(new Node())
   var values = scala.collection.mutable.ListBuffer[Int]()
