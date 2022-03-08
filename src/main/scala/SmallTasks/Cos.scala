@@ -1,4 +1,4 @@
-import scala.language.postfixOps
+package SmallTasks
 
 object Cos extends App {
   print("Input argiment (in rad.) near zero: ")
@@ -15,10 +15,10 @@ object Cos extends App {
   var sc = 1.0
 
   val factor: Int => Int = (x: Int) =>
-    if(x == 0) 1
+    if (x == 0) 1
     else x * factor(x - 1)
 
-  while(Math.abs(sc) > scale)
+  while (Math.abs(sc) > scale)
     sc *= Math.pow(x, 2) / (counter * (counter + 1))
     cos1 += sc * Math.pow(-1, counter2)
     counter += 2
@@ -28,7 +28,7 @@ object Cos extends App {
   counter2 = 1
   sc = 1.0
 
-  while(Math.abs(sc) > scale)
+  while (Math.abs(sc) > scale)
     sc = Math.pow(x, counter) * Math.pow(-1, counter2) / factor(counter)
     cos2 += sc
     counter += 2

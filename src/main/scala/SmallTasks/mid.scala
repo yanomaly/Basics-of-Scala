@@ -1,3 +1,5 @@
+package SmallTasks
+
 class mid {
   def middle[A](data: Iterable[A])=
       if(data.size == 2)
