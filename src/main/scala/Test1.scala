@@ -23,7 +23,6 @@ object Test1 extends App{
   val lngAbbrev = List("JA", "SCA", "PY")
 
   println(lngAbbrev.flatMap(abr => progLanguages.filter(pr => pr.startsWith(abr.toLowerCase())).map(pr => (abr, pr))))
-
 }
 
 
